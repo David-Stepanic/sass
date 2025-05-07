@@ -1,15 +1,18 @@
 // variables & functions
+@import 'functions';
 @import 'variables';
 
 // base & layouts 
 @import 'base';
 
 // colors
-
+@import 'colors';
 
 // components (button, card, navbar)
 
 @import 'components/card';
+
+@import 'components/button';
 
 // prvo smo importovali variables i sad mi i unutar base
 // mozemo da korsitimo promenvljie iz variables
