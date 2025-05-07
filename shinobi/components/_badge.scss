@@ -1,0 +1,20 @@
+@use 'sass:math';
+@use "./variables" as vars;
+
+@mixin badge($bg-color: vars.$info) {
+  border-radius: vars.$base-border-radius * 4;
+  background-color: $bg-color;
+  padding: math.div(vars.$base-padding, 4) math.div(vars.$base-padding, 2);
+  font-size: vars.$font-size-sm;
+  font-weight: normal;
+}
+
+.badge {
+  @include badge;
+}
+
+@each $key, $val in vars.$colors {
+  .badge-#{$key}{
+    @include badge($val);
+  }
+}

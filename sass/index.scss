@@ -1,0 +1,17 @@
+// promene za novi projekat 
+// i onda samo u gulpfile izmenimo umesto shinobi stavimo
+// sass
+
+// napravili smo novi folder i to je to
+
+$primary: indigo;
+$base-padding: 1rem;
+$base-border-thickness: 3px;
+
+.test{
+    margin: 10px;
+}
+
+@use 'shinobi';
+// automatski gleda css fajl i na taj nacin mozemo dodati neku od izmena i 
+// opet importovati shinobi sa svim klasama i cao

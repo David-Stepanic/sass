@@ -3,11 +3,16 @@
  // ova linija povezuje gulp sa sassom
  // i sad sa ovim const sass dobijamo funkciju koju mozemo da korsitimo u 
  // Gulp taskovima za kompajliranje scss fajlova u css
+ const purgecss = require('gulp-purgecss')
+ 
+ // purge redukuje index.css fajl, i onda index.css ima samo 
+ // upotrebljene propertije
 
  function buildStyles()
  {
     return src('shinobi/**/*.scss')
         .pipe(sass())
+        .pipe(purgecss({ content: ['*.html'] }))
         .pipe(dest('css'))
  }
 
@@ -17,7 +22,7 @@
  {
    // koristimo * umesto index.scss jer se to onda sa *
    // odnosi na bilo koji fajl sa .scss ekstenzijom
-    watch(['shinobi/**/*.scss'], buildStyles)
+    watch(['shinobi/**/*.scss', '*.html'], buildStyles)
  }
 
 // ova funkcija posmatra scss fajl i cim se nesto promeni ona uradi buildstyles

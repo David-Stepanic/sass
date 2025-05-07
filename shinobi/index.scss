@@ -1,21 +1,24 @@
 // variables & functions
-@import 'functions';
-@import 'variables';
+@use 'functions';
+@use 'variables';
 
 // base & layouts 
-@import 'base';
+@use 'base';
+@use 'breakpoints';
+@use 'grid';
 
 // colors
-@import 'colors';
+@use 'colors';
 
 // components (button, card, navbar)
 
-@import 'components/card';
-
-@import 'components/button';
+@use 'components/card';
+@use 'components/button';
+@use 'components/navbar';
+@use 'components/badge';
 
 // prvo smo importovali variables i sad mi i unutar base
 // mozemo da korsitimo promenvljie iz variables
 
 // utillities (maargin, padding, opacity)
-@import 'utilities';
+@use 'utilities';

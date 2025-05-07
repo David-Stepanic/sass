@@ -1,0 +1,31 @@
+@use "./variables" as vars;
+
+
+%flex-layout{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.navbar {
+    @extend %flex-layout;
+
+    padding: vars.$base-padding vars.$base-padding * 2;
+    box-shadow: vars.$base-box-shadow;
+
+    .site-title {
+        font-size: vars.$font-size-lg;
+    }
+    .container {
+        @extend %flex-layout;
+    }
+}
+
+@each $key, $val in vars.$colors {
+    .navbar-#{$key} {
+        @extend .navbar;
+        background-color: $val;
+    }
+}

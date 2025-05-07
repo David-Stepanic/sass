@@ -1,17 +1,20 @@
+@use "../variables" as vars;
+
+
 .card {
     display: block;
-    padding: $base-padding;
-    border: $base-border-thickness solid #ddd;
-    box-shadow: $base-box-shadow;
+    padding: vars.$base-padding;
+    border: vars.$base-border-thickness solid #ddd;
+    box-shadow: vars.$base-box-shadow;
 
     .card-title {
-        font-size: $base-font-size;
-        padding-bottom: $base-padding;
+        font-size: vars.$base-font-size;
+        padding-bottom: vars.$base-padding;
         font-weight: bold;
     }
 
     .card-body {
-        font-size: $base-font-size;
+        font-size: vars.$base-font-size;
 
         a {
             text-decoration: underline;
